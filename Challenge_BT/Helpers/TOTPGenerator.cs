@@ -56,7 +56,7 @@ namespace Challenge_BT.Helpers
             }
             int randomNumber = random.Next(2, 5);
 
-            //Form alphanumeric OTP and rearrange it reandomly.
+            //Form alphanumeric OTP and rearrange it randomly.
             string otpString = randomString.Substring(0, randomNumber);
             otpString += oneTimePassword.Substring(0, 7 - randomNumber);
             oneTimePassword = new string(otpString.ToCharArray().OrderBy(s => (random.Next(2) % 2) == 0).ToArray());
