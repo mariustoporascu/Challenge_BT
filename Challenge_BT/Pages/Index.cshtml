@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+	<div class="col-6">
+		<div class="d-flex justify-content-center flex-column">
+			<h2 class="text-center">
+				Generated TOTP
+			</h2>
+			<h3 class="text-center">
+				@Model.DisplayTOTP.GeneratedTOTP
+			</h3>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="d-flex justify-content-center flex-column">
+			<h2 class="text-center">
+				ExpiryTime
+			</h2>
+			<h3 class="text-center">
+				@Model.DisplayTOTP.ExpiryTime
+			</h3>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<div class="d-flex justify-content-center flex-column">
+			<a asp-page="/"><h2 class="text-center">
+				Refresh
+			</h2>
+			</a>
+		</div>
+	</div>
+</div>
